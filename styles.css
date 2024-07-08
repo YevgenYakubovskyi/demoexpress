@@ -54,14 +54,13 @@ section {
 }
 
 .image-gallery {
-    display: flex;
     justify-content: center;
     gap: 10px;
 }
 
 .image-gallery img {
-    width: 200px;
-    height: auto;
+    height: 200px;
+    width: auto;
     transition: transform 0.3s;
 }
 
@@ -70,11 +69,11 @@ section {
 }
 
 .certificate-image {
-    width: 300px;
+    width: 600px;
     height: auto;
 }
 
-form {
+.contact-form {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
@@ -82,18 +81,18 @@ form {
     gap: 10px;
 }
 
-form label {
+.contact-form label {
     text-align: left;
 }
 
-form input, form textarea {
+.contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
 }
 
-form button {
+.contact-form button {
     padding: 10px;
     background-color: #000;
     color: #fff;
@@ -102,7 +101,7 @@ form button {
     transition: background-color 0.3s;
 }
 
-form button:hover {
+.contact-form button:hover {
     background-color: #333;
 }
 

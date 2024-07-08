@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Логістичні та вантажні послуги</title>
+    <title>Logistics and cargo services</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "9a-lQ-Eab5o_C5UVA",
+          });
+       })();
+    </script>
+    <script src="scripts.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#about">Про нас</a></li>
-                <li><a href="#services">Послуги</a></li>
-                <li><a href="#contact">Контакти</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACTS</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#certificate">CERTIFICATE</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
-        <h2>Demoexpress LLC</h2>
-        <p>Опис компанії...</p>
+        <h1>Demoexpress LLC</h1>
     </section>
 
     <section id="services">
-        <h2>Послуги, що надаються</h2>
+        <h2>SERVICES</h2>
         <ul>
             <li>Local & Across States</li>
             <li>Transporting freight of all kinds</li>
@@ -31,7 +42,7 @@
         </ul>
     </section>
     <section id="gallery">
-        <h2>Галерея</h2>
+        <h2>GALLERY</h2>
         <div class="image-gallery">
             <img src="2.jpg" alt="Image 1">
             <img src="3.jpg" alt="Image 2">
@@ -42,31 +53,32 @@
     </section>
 
     <section id="certificate">
-        <h2>Сертифікати</h2>
+        <h2>CERTIFICATE</h2>
         <img src="1.jpg" alt="Certificate" class="certificate-image">
     </section>
 
      <section id="contact">
-        <h2>Контакти</h2>
+        <h2>CONTACTS</h2>
         <p>Email: <a href="mailto:www.demoexp2020@gmail.com">www.demoexp2020@gmail.com</a></p>
         <p>Phone number: <a href="tel:253-353-7335">253-353-7335</a></p>
-        <form id="contact-form">
-            <label for="name">Ім'я та прізвище:</label>
-            <input type="text" id="name" name="name" required>
+        <div id="contact-form" class="contact-form">
+           <input type="text" id="from_name" name="from_name" placeholder="Enter your name" required>
+
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <input type="text" id="from_cod" name="from_cod" placeholder="Enter from address or zip code" required>
+
+            <input type="text" id="to_cod" name="to_cod" placeholder="Enter to address or zip code" required>
+
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Номер телефону:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="message">Причина звернення:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Відправити</button>
-        </form>
+            <button onclick="sendEmail()" type="submit">SUBMIT</button>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+
 </body>
 </html>
